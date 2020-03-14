@@ -44,7 +44,7 @@ public class ApiValidationExceptionHandler extends ResponseEntityExceptionHandle
         //se crea un objeto ApiErrorsResposeBody que contiene la lista ApiFieldErrors
         //y la informacion de tiempo, status code y status response
         ApiErrorsResponseBody apiErrorsResponseBody = new ApiErrorsResponseBody(
-                HttpStatus.BAD_REQUEST.value();
+                HttpStatus.BAD_REQUEST.value(),
                 HttpStatus.BAD_REQUEST.getReasonPhrase(),
                 apiFieldErrors);
         //se retorna el response final de los errores
